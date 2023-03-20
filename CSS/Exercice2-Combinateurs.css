@@ -17,13 +17,13 @@ html {
 }
 
 /* doit s'appliquer à tous les éléments section qui suivent l'élément div dans l'élément d'id art3 */
-#art3>div>section {
+#art3 div~section {
     color: green;
     font-size: 1.8rem;
 }
 
 /* doit s'appliquer à l'élément section qui suit directement l'élément div dans l'élément d'id art4 */
-#art4>div>section {
+#art4 div+section {
     color: violet;
     font-size: 1.45rem;
 }
@@ -35,6 +35,6 @@ section {
 }
 
 /* doit s'appliquer à tous les div ayant la classe toto*/
-.toto {
+div.toto {
     background-color: aquamarine;
 }
