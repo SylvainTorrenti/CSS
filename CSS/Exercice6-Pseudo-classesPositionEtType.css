@@ -1,0 +1,31 @@
+/* doit s'appliquer aux fieldset étant les premiers enfants de leur container */
+fieldset:first-child {
+    border: 5px dotted brown;
+}
+
+/* doit s'appliquer aux derniers éléments de type form dans les parents */
+form:last-child {
+    border: 2px groove red;
+    color: blue;
+    padding: 5px;
+}
+
+/* doit s'appliquer aux fieldset "pairs" (c.a.d au 2ème 4ème 6ème etc. fieldset dans un container) */
+fieldset:nth-child(even) {
+    background-color: cadetblue;
+}
+
+/* doit s'appliquer aux fieldset "impairs" (c.a.d au 1er 3ème 5ème etc. fieldset dans un container) */
+fieldset:nth-child(odd) {
+    background-color: chartreuse;
+}
+
+/* doit s'appliquer à l'avant dernier élèment de type fieldset dans un container */
+fieldset:nth-last-child(2) {
+    color: rgb(212, 13, 39);
+}
+
+/* doit s'appliquer aux éléments input qui ne sont pas "required" */
+input:optional {
+    background-color: blueviolet;
+}

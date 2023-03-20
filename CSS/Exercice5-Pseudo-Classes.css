@@ -1,0 +1,26 @@
+/* doit s'appliquer aux éléments input cochés */
+input:checked {
+    box-shadow: 0 0 0 3px orange;
+}
+
+/* doit s'appliquer au label suivant les éléments input cochés */
+input:checked+label {
+    color: blueviolet;
+}
+
+/* doit s'appliquer aux fieldset qui ont un élément sélectionné à l'intérieur */
+fieldset:focus-within {
+    background-color: aqua;
+}
+
+/* doit s'appliquer aux élément input ayant l'attribut required */
+input:required {
+    border: 3px dotted red;
+}
+
+/* doit s'appliquer aux éléments legend quand ils sont survolés */
+legend:hover {
+    color: brown;
+    font-size: large;
+    font-weight: bolder;
+}
