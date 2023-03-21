@@ -1,0 +1,222 @@
+/* Sélectionne l'élément root html (élément html)*/
+html {
+  box-sizing: border-box;
+}
+
+/* Héritage pour tous les éléments */
+*,
+*::before,
+*::after {
+  /* Héritage du nouveau type de calcul */
+  box-sizing: inherit;
+}
+
+/* Sélectionne le corps de la page */
+body {
+  /* Supprime la marge extérieure sur le body */
+  margin: 0%;
+  /* Définit la couleur du texte en blanc cassé */
+  color: whitesmoke;
+
+}
+
+/* Séléction des 6 niveaux de titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Tous les titre en Blanc */
+  color: white;
+
+  /* Supprime la marge externe des titres */
+  margin: 0%;
+
+}
+
+/* Sélection des titres de niveau 1 */
+h1 {
+  /* Définit la taille du texte en 2.4 * la valeur de la taile du texte définit dans le navigateur ("rem" unité relative par rapport à la taille choisi dans le navigateur) */
+  font-size: 2.4rem;
+  /* Ajoute une bordure bleu de type pleine en bleu sur la boîte */
+  border: solid blue;
+  /* Ajout d'une marge externe en haut fixe de 20 pixels  */
+  margin-top: 20px;
+  /* Ajout d'une marge externe en bas fixe de 20 pixels  */
+  margin-bottom: 20px;
+}
+
+/* Sélection des titres de niveau 2 */
+h2 {
+  /* Ajout d'une marge externe en haut fixe de 10 pixels  */
+  margin-top: 10px;
+  /* Ajout d'une marge externe en bas fixe de 20 pixels  */
+  margin-bottom: 20px;
+  /* Définit la taille du texte à 2 * celle du navigateur */
+  font-size: 2rem;
+}
+
+/* Sélection de tous les éléments adress */
+address {
+  /* Ajoute d'une marge externe autour de la boîte de 10pixels */
+  margin: 10px;
+  /* Permet d'ajouter une transition si la valeur de letter-spacing  change de 1s avec une courbe de valeur ease-in */
+
+}
+
+/* Sélecteur de adress si la souris est au dessus de l'élément adresse */
+address:hover {
+  /* Augmentation de l'espace entre les lettre de 1 * la taille du texte de l'adresse */
+  letter-spacing: 1rem;
+}
+
+/* Sélection de tous les éléments mark */
+mark {
+  /* Ajoute un fond de couleur bleu sur les éléments mark */
+  background-color: blue;
+}
+
+/* Sélection de tous les paragraphes */
+p {
+  /* Ajout d'une marge externe en bas fixe de 20 pixels sur les paragraphes*/
+  margin-bottom: 20px;
+  /* Ajoute une indentation fixe sur les paragraphes de 20 pixels */
+  text-indent: 20px;
+}
+
+/* Sélection de tous les éléments hr */
+hr {
+  /* Ajout d'une bordure sur les éléments hr de 5 px avec le style des tirets en gris clair */
+  border: solid 5px grey;
+  border-style: dashed;
+  /* Définit la largeur de la boîte à 50% de celle de son élément parent */
+  width: 50%;
+  /* Ajoute une marge externe fixe en haut et en bas de 32px et une marge externe identique sur les côtés droit et gauche */
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sélectionne les éléments section qui ont la classe black */
+.black {
+  /* Définit un fond noir sur la boîte  */
+  background-color: black;
+  /* Ajout d'une marge interne en haut de 8 pixels */
+  padding-top: 8px;
+  /* Ajout d'une marge interne en bas de 8 pixels */
+  padding-bottom: 8px;
+
+}
+
+/* Sélection de tous les éléments qui ont la classe white */
+.white {
+  /* Définit que le texte aura une couleur proche du noir */
+  color: black;
+}
+
+/* Sélectionne tous les titre de h1 à h6 dans les section qui ont la classe white */
+.white h1,
+.white h2,
+.white h3,
+.white h4,
+.white h5,
+.white h6 {
+  /* Changement de la couleur des titres en noir */
+  color: black;
+  /* Enlève la marge externe des boîtes de titre */
+  margin: 0%;
+}
+
+/* Sélection de tous les éléments blockquote */
+blockquote {
+  /* Définit la taille du texte en x-large environ 2em */
+  font-size: x-large;
+  /* Ajoute une bordure bleu de type solid, de taille de 2px autour de la boîte */
+  border: solid 2px blue;
+  /* Ajoute un fond noir à la boîte */
+  background-color: black;
+  /* Modifi la couleur du texte en gris */
+  color: gray;
+  /* Ajoute une marge interne de 8px */
+  padding: 8px;
+  /* Ajoute une marge externe de 2% */
+  margin: 2%;
+  /* Ajoute une transition sur toutes les propriétés de 1s*/
+  transition: all 1s ease;
+  /* Change le curseur de la souris en pointer  */
+  cursor: pointer;
+
+}
+
+/* Selecteur quand la souris est sur le blockquote  */
+blockquote:hover {
+  /* Permet d'aggrandir la boite en multipliant x et y par hauteur et largeur de la boite ici:
+    1.03 * hauteur 
+    1.03 * largeur
+  */
+  transform: scale(1.03);
+}
+
+/* Sélection du src-blockquote qui est dans un blockquote */
+src-blockquote {
+  /* Change la couleur du texte du src-blockquote qui est dans blockquote */
+  color: white;
+}
+
+/* Sélection de tous les éléments cite */
+cite {
+  /* Change la couleur du texte de l'élément cite en bleu */
+  color: blue;
+  /* Ajoute une ligne de décoration sous le texte */
+  text-decoration: underline;
+}
+
+/* Définition de l'animation "change-bg" */
+@keyframes change-bg {
+
+  /* 1ere clé à 0% changement de couleur du texte */
+  0% {
+    color: green;
+  }
+
+  /* 2eme clé à 50% changement de couleur du texte */
+  50% {
+    color: red;
+  }
+
+  /* 3eme clé à 100% changement de couleur du texte */
+  100% {
+    color: blue;
+  }
+
+}
+
+/* Sélection de tous les élements pre */
+pre {
+  /* Ajoute l'animation change-bg définit plus haut aux éléments pre 
+      duration : 5s
+      loop: infini
+      avec courbe de lerp: ease-in-out
+    */
+  animation: change-bg 5s infinite;
+
+  /* L'animation change de sens quand elle arrive à 100% */
+  animation-direction: alternate;
+
+  /* Change la couleur de fond des éléments pre */
+  background-color: black;
+
+  /* Ajoute une marge interne à gauche de 10% */
+  padding: 10%;
+
+}
+
+/* Sélection des éléments pre quans ils sont survolés par la souris */
+pre:hover {
+
+  /* Mise en pause de l'animation quand la souris est sur l'élément */
+  animation-play-state: paused;
+
+}
