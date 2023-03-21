@@ -22,6 +22,7 @@ body {
     overflow: hidden;
     -webkit-transform: perspective(200px) rotateX(15deg) translateY(-90px);
     transform: perspective(200px) rotateX(15deg) translateY(-90px);
+    cursor: url('./html/image/vaisseau-spatial3.png'), auto;
 }
 
 #gameover,
