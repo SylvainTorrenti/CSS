@@ -1,201 +1,216 @@
 /* Sélecteur de la racine du document HTML (élement html) */
-{
+html {
   /* Changement de la méthode de calcul des boîtes */
-
+  box-sizing: border-box;
   /* Prise en compte de 100% de la taille de la police utilisateur */
-  
+  font-size: 1rem;
   /* Changement de la police en Roboto */
-  
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Sélectionne tous les éléments  + pseudo élément before et after */
- {
+*,
+*::before,
+*::after {
   /* Forcer l'héritage de la propriété box-sizing */
-  
+  box-sizing: inherit;
 }
 
 /* Sélection des ancres */
-{
+a {
   /* couleur du texte : blanc */
-  
+  color: white;
   /* suppression de la decoration du texte */
-  
+  text-decoration: none;
 }
 
 /* Sélection des ancres de la classe button */
- {
+a.button {
   /* background-color à rgb(6, 118, 209) */
-  
+  background-color: rgb(6, 118, 209);
   /* Marge interne pour ressembler à un bouton 16px top et bottom et 32px pour les cotés */
-  
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
   /* Changement du curseur en pointer */
-  
+  cursor: pointer;
   /* Mettre le texte en gras */
-  
+  font-weight: bold;
   /* Mettre le texte en Capitale */
-  
+  text-transform: uppercase;
 }
 
 
 /* sélection du body */
-{
+body {
   /* Enlève la marge extèrieure par défaut du body */
-  
+  margin: 0%;
   /* couleur du texte en blanc */
-  
+  color: white;
 }
 
 /* HEADER */
 
-/* sélection du header */{
+/* sélection du header */
+header {
   /* Marge interne gauche et droite à 2%  et haut bas 8px*/
-  
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 8px;
+  padding-bottom: 8px;
   /* Hauteur du header : 60px */
-  
+  height: 60px;
   /* Changement de la couleur de fond à #333 */
-  
+  background-color: #333;
   /* On change la bôite en boîte flexible */
-  
+  display: flex;
   /* On met l'axe principal horizontalement */
-  
+  flex-direction: row;
   /* Espacement entre les éléments enfants */
-  
+  justify-content: space-between;
   /* Alignement centré sur l'axe secondaire (ici horizontal) */
-  
+  align-items: center;
+
 }
 
 /* sélection des ul dans des nav dans le header */
- {
+header nav ul {
   /* Enlève le style par défaut d'une liste */
-  
+  list-style: none;
   /* affichage en boîte flexible */
-  
+  display: flex;
   /* direction du flex sur la ligne */
-  
+  flex-direction: row;
   /* Espacement entre les enfants (propriété de flex)
-     Il existe aussi row-gap pour l'espacement entre les lignes;
+     Il existe aussi gap pour l'espacement entre les lignes;
   */
-  
+  gap: 20px;
+
 }
 
 /* sélection des a dans les ul dans des nav dans le header */
- {
+header nav ul a {
   /* Transition de 1s si la couleur change sur l'élément a du menu principal */
-  
+  transition: color 1s ease;
 }
 
 /* sélection des a dans les ul survolés dans des nav dans le header */
-{
+header nav ul a:hover {
   /* Changement de couleur au passage de la souris rgb(218, 127, 24) */
-  
+  color: rgb(218, 127, 24);
 }
 
 /* sélection du logo */
-{
+#logo {
   /* hauteur à 100% */
-  
+  height: 100%;
 }
+
 /* END HEADER */
 
 /* HERO SECTION */
 
 /* Sélection de l'élément avec l'id hero-section */
- {
+#hero-section {
   /* Point d'ancrage de la position absolute de la vidéo  */
-  
+  position: absolute;
   /* Fonction pour calculer la hauteur du viewport(écran) - la hauteur du header */
-  
+  height: calc(100vh - 60px);
   /* affichage du contenu en flex */
-  
+  display: flex;
   /* direction du flex : column */
-  
+  flex-direction: column;
   /* centrage des éléments sur l'axe secondaire */
-  
+  align-items: center;
 }
 
 /* sélection des éléments avec la classe bg-video */
-{
+.bg-video {
   /* Enlever la vidéo du flux normal d'affichage */
-  
+  position: absolute;
   /* Position de la vidéo par rapport bord supérieur de son parent relatif(position autre que initiale) */
-  
+  top: 0px;
   /* Position de la vidéo par rapport au bord gauche de son parent relatif(position autre que initiale) */
-  
+  left: 0px;
   /* Prendre toute la largeur de son parent */
-  
+  width: 100%;
   /* Prendre toute la hauteur de son parent */
-  
+  height: 100%;
   /* Placé derrière les éléments */
-  
+  z-index: -1;
   /* Couvrir les espaces manquants */
-  
+  object-fit: cover;
   /* Garder le centre de la vidéo */
-  
+  object-position: center;
 }
 
 /* Ajout d'un élément à la suite de l'élément d'id hero-section */
- {
+  {
   /* Définition du contenu même pour créer l'élément html */
-  
+
   /* Définition du display */
-  
+
   /* Hauteur et largeur de 100% du parent */
-  
-  
+
+
   /* Filtre de la vidéo en position absolute */
-  
+
   /* Position dans le coin supérieur gauche */
-  
-  
+
+
   /* Définit une couleur de fond noir avec une faible opacité */
-  
+
   /* On place le filtre entre le texte et la vidéo dans l'arrière plan */
-  
+
 }
 
 /* sélection des img enfants direct des éléments de classe hero-content */
-{
+.hero-content>img {
   /* Hauteur de la boîte fixé à 200pixels */
-  
+  height: 200px;
+  width: 200px;
+
 }
 
 /* sélection des élements de classe hero-content */
- {
+.hero-content {
   /* affichage du contenu en flex */
-  
+  display: flex;
   /* direction du flex: column */
-  
+  flex-direction: column;
   /* centrage des éléments sur l'axe secondaire */
-  
+  align-content: center;
   /* axe principale : space-around */
-  
+  justify-content: space-around;
   /* largeur : 70% du parent */
-  
+  width: 70%;
   /* hauteur : 100% du parent */
-  
+  height: 100%;
 }
 
 /* sélection des éléments de classe hero-content-details enfants direct des éléments de classe hero-content */
- {
+.hero-content>.hero-content-details {
   /* exception de l'alignement sur l'axe secondaire : flex-start */
-  
+  align-items: flex-start;
   /* largeur : 60% du parent */
-  
+  width: 60%;
   /* marge intérieur top de 10% du parent*/
-  
+  padding-top: 10%;
 }
 
 /* sélection des h1 dans les éléments de classe hero-content-details enfants direct des éléments de classe hero-content */
-{
+.hero-content h1 {
   /* 2 * la valeur de la police du root élément */
-  
+  font-size: 2rem;
 }
 
 /* sélection des p dans les éléments de classe hero-content-details enfants direct des éléments de classe hero-content */
-{
+.hero-content p {
   /*  1.1 fois la valeur de la police du root élément*/
-  
+  font-size: 1.1rem;
   /* 2 * la hauteur du font-size de p */
-  
+
 }
+
 /* END HERO SECTION */
