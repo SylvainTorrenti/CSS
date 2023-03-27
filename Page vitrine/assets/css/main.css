@@ -138,7 +138,7 @@ header nav ul a:hover {
   /* Prendre toute la hauteur de son parent */
   height: 100%;
   /* Placé derrière les éléments */
-  z-index: -1;
+  z-index: -2;
   /* Couvrir les espaces manquants */
   object-fit: cover;
   /* Garder le centre de la vidéo */
@@ -146,23 +146,25 @@ header nav ul a:hover {
 }
 
 /* Ajout d'un élément à la suite de l'élément d'id hero-section */
-  {
+#hero-section::after {
   /* Définition du contenu même pour créer l'élément html */
-
+  content: '';
   /* Définition du display */
-
+  display: flex;
   /* Hauteur et largeur de 100% du parent */
-
+  height: 100%;
+  width: 100%;
 
   /* Filtre de la vidéo en position absolute */
-
+  position: absolute;
   /* Position dans le coin supérieur gauche */
-
+  top: 0;
+  left: 0;
 
   /* Définit une couleur de fond noir avec une faible opacité */
-
+  background-color: rgba(0, 0, 0, 0.2);
   /* On place le filtre entre le texte et la vidéo dans l'arrière plan */
-
+  z-index: -1;
 }
 
 /* sélection des img enfants direct des éléments de classe hero-content */
