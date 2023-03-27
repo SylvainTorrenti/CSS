@@ -169,7 +169,8 @@ header nav ul a:hover {
 .hero-content>img {
   /* Hauteur de la boîte fixé à 200pixels */
   height: 200px;
-  width: 200px;
+  /* width: 200px; */
+
 
 }
 
@@ -180,7 +181,7 @@ header nav ul a:hover {
   /* direction du flex: column */
   flex-direction: column;
   /* centrage des éléments sur l'axe secondaire */
-  align-content: center;
+  align-items: center;
   /* axe principale : space-around */
   justify-content: space-around;
   /* largeur : 70% du parent */
@@ -192,7 +193,7 @@ header nav ul a:hover {
 /* sélection des éléments de classe hero-content-details enfants direct des éléments de classe hero-content */
 .hero-content>.hero-content-details {
   /* exception de l'alignement sur l'axe secondaire : flex-start */
-  align-items: flex-start;
+  align-self: flex-start;
   /* largeur : 60% du parent */
   width: 60%;
   /* marge intérieur top de 10% du parent*/
@@ -200,13 +201,13 @@ header nav ul a:hover {
 }
 
 /* sélection des h1 dans les éléments de classe hero-content-details enfants direct des éléments de classe hero-content */
-.hero-content h1 {
+.hero-content-details h1 {
   /* 2 * la valeur de la police du root élément */
   font-size: 2rem;
 }
 
 /* sélection des p dans les éléments de classe hero-content-details enfants direct des éléments de classe hero-content */
-.hero-content p {
+.hero-content-details p {
   /*  1.1 fois la valeur de la police du root élément*/
   font-size: 1.1rem;
   /* 2 * la hauteur du font-size de p */
